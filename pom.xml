@@ -138,6 +138,31 @@
 			        <projectId>nhom20cloud2023ute</projectId>
 			    </configuration>
 			</plugin>
+			<plugins>
+			        <!-- Plugin Surefire để quản lý bài kiểm tra -->
+			        <plugin>
+			            <groupId>org.apache.maven.plugins</groupId>
+			            <artifactId>maven-surefire-plugin</artifactId>
+			            <version>2.22.2</version> <!-- Sử dụng phiên bản mới nhất hoặc phiên bản tương thích với dự án của bạn -->
+			
+			            <!-- Cấu hình plugin Surefire -->
+			            <configuration>
+			                <!-- Thư mục chứa các bài kiểm tra -->
+			                <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+			                
+			                <!-- Báo cáo bài kiểm tra với định dạng XML -->
+			                <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+			                
+			                <!-- Thông báo chi tiết về mỗi bài kiểm tra -->
+			                <showErrorMessages>true</showErrorMessages>
+			                <showErrors>true</showErrors>
+			                
+			                <!-- Thực hiện bài kiểm tra trong môi trường thử nghiệm (forkMode always) -->
+			                <forkCount>1</forkCount>
+			                <reuseForks>true</reuseForks>
+			            </configuration>
+			        </plugin>
+			    </plugins>
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
 				<artifactId>apt-maven-plugin</artifactId>
