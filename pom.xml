@@ -116,6 +116,13 @@
 		    <version>3.25.0-GA</version>
 		</dependency>
 	</dependencies>
+	<repositories>
+	    <repository>
+	        <id>google-cloud-tools</id>
+	        <url>https://packages.cloud.google.com/apt</url>
+	    </repository>
+	    <!-- Các repository khác -->
+	</repositories>
 
 	<build>
 		<plugins>
@@ -130,6 +137,11 @@
 		            <configuration>
 		                <!-- Cấu hình thêm nếu cần -->
 		            </configuration>
+		        </plugin>
+			<plugin>
+		            <groupId>com.google.cloud.tools</groupId>
+		            <artifactId>appengine-maven-plugin</artifactId>
+		            <version>1.3.2</version>
 		        </plugin>
 			<plugin>
 		            <groupId>com.google.cloud.tools</groupId>
