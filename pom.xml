@@ -123,7 +123,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<<plugin>
+			<plugin>
 		            <groupId>com.google.cloud.tools</groupId>
 		            <artifactId>appengine-maven-plugin</artifactId>
 		            <version>2.7.1</version> <!-- Phiên bản mới nhất tại thời điểm cài đặt -->
